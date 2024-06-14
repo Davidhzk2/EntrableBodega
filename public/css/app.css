@@ -1,0 +1,194 @@
+body {
+    background-image: url("https://img.freepik.com/free-vector/copy-space-wavy-white-background-layers_23-2148845469.jpg?t=st=1718354253~exp=1718357853~hmac=5f6a9b0b62afd684f1db0ebaddb260aa7d22cd4d57c43f464fd7be8aebc870b7&w=1380");
+    color: #002349;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Signika Negative', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    background: #e6e6e6cc;
+    border: 1px solid #002349;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 1200px;
+    overflow: hidden;
+}
+
+.btnCreate {
+    background-color: transparent;
+    border-color: #002349;
+    color: #002349;
+    font-size: 1.8vh;
+}
+
+.btnCreate:hover {
+    border: #002349;
+    background-color: #002349;
+    color: #fff;
+    font-size: 1.8vh;
+}
+
+.table-responsive {
+    margin: 30px 0;
+    font-size: 1.8vh;
+}
+
+.table-wrapper {
+    min-width: 1000px;
+}
+
+.table-title {
+    padding-bottom: 10px;
+    margin: 0 0 10px;
+    min-height: 45px;
+}
+
+.content-title {
+    width: 100%;
+}
+
+.table-title h2 {
+    margin: 5px 0 0;
+    font-size: 3.5vh;
+}
+
+.table-container {
+    max-height: 450px;
+    overflow-y: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.search-box {
+    position: relative;
+    float: right;
+}
+
+.search-box .input-group {
+    min-width: 200px;
+    position: absolute;
+    right: 0;
+}
+
+.search-box .input-group-addon,
+.search-box input {
+    border-color: #ddd;
+    border-radius: 0;
+}
+
+.search-box .input-group-addon {
+    border: none;
+    border: none;
+    background: transparent;
+    position: absolute;
+    z-index: 9;
+}
+
+.search-box input {
+    height: 34px;
+    padding-left: 28px;
+    box-shadow: none !important;
+    border-width: 0 0 1px 0;
+}
+
+.search-box input:focus {
+    border-color: #002349;
+}
+
+.search-box i {
+    color: #a0a5b1;
+    font-size: 19px;
+    position: relative;
+    top: 2px;
+    left: -10px;
+}
+
+table.table tr th,
+table.table tr td {
+    border-color: #e9e9e9;
+}
+
+table.table th i {
+    font-size: 13px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+table.table th:first-child {
+    width: 60px;
+}
+
+table.table th:last-child {
+    width: 100px;
+}
+
+table.table td a {
+    cursor: pointer;
+    margin: 0 5px;
+    min-width: 24px;
+}
+
+table.table td a.view {
+    color: #03A9F4;
+}
+
+table.table td a.edit {
+    color: #FFC107;
+}
+
+table.table td a.delete {
+    color: #E34724;
+}
+
+table.table td i {
+    font-size: 19px;
+}
+
+.hint-text {
+    float: left;
+    margin-top: 10px;
+    font-size: 1.2px;
+}
+
+/* Estilos para la barra de desplazamiento */
+/* WebKit (Chrome, Safari, Opera) */
+::-webkit-scrollbar {
+    width: 10px;
+    /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Color de fondo de la pista */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #002349;
+    /* Color del 'scrollbar' */
+    border-radius: 5px;
+    /* Borde redondeado */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #a0a5b1;
+    /* Color del 'scrollbar' al pasar el ratón */
+}
+
+

@@ -39,7 +39,11 @@ class ProductosController extends Controller
     {
         try {
             $producto= $this->ProductoRepository->store($request);
-            return response()->json($producto, 201);
+
+            return redirect()->route('productos.detalles', $producto->Id)
+                         ->with('success', 'producto creado exitosamente')
+                         ->with('producto', $producto);
+            //return response()->json($producto, 201);
         }catch (Exception $e){
             die($e->getMessage());
         }
@@ -52,7 +56,9 @@ class ProductosController extends Controller
     {
         try {
             //code
-            return response()->json($this->ProductoRepository->getById($id),200);
+            $producto = $this->ProductoRepository->getById($id);
+            return view('productos.detalles', compact('producto'));
+            //return response()->json(,200);
         } catch (Exception $e) {
             die($e->getMessage());
             //throw $th;

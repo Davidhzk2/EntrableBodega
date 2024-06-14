@@ -76,19 +76,19 @@
             <div class="card">
                 <div class="card-body">
                     <div class="row mt-3">
-            <div class="col-md-6">
-                <h1 class="">Registrar empleado</h1>
-            </div>
-            <div class="col-md-6">
+                        <div class="col-md-6">
+                            <h1 class="">Registrar empleado</h1>
+                        </div>
+                        <div class="col-md-6">
 
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route('empleados.index') }}">Empleados</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Registrar empleado</li>
-                    </ol>
-                </nav>
-            </div>
-        </div>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="{{ route('empleados.index') }}">Empleados</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Registrar empleado</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
                     <form class="form" action="{{ route('empleados.store')}}" method="post">
                         @csrf
                         <div class="row">
