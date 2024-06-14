@@ -6,6 +6,8 @@ use App\App\Empleados\Repositories\EmpleadoRepository;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use PHPUnit\Exception;
+use Carbon\Carbon; 
+
 class EmpleadosController extends Controller
 {
 
@@ -29,8 +31,14 @@ class EmpleadosController extends Controller
     public function store(Request $request)
     {
         try {
+            $request["fecha_ingreso"] = Carbon::now();
             $empleado= $this->empleadosRepository->store($request);
-            return response()->json($empleado, 201);
+
+            //redirigir al la vista del empleado
+            return redirect()->route('empleados.detalles', $empleado->Id)
+                         ->with('success', 'Empleado creado exitosamente')
+                         ->with('empleado', $empleado);
+            // return response()->json($empleado, 201);
         }catch (Exception $e){
             die($e->getMessage());
         }
@@ -41,7 +49,8 @@ class EmpleadosController extends Controller
     {
         try {
             $empleado= $this->empleadosRepository->getById($id);
-            return response()->json($empleado, 201);
+            return view('empleados.detalles', compact('empleado'));
+            //return response()->json($empleado, 201);
         }catch (Exception $e){
             die($e->getMessage());
         }

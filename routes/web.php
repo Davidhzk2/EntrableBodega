@@ -7,15 +7,15 @@ use App\App\Clientes\Controllers\ClientesController;
 use Illuminate\Support\Facades\Route;
 
 Route::resource('/productos', ProductosController::class); //lista productos
-
 Route::get('/crear', function(){
     return view("productos.crear");
 });
 
 
 Route::resource('/empleados', EmpleadosController::class); //
+Route::get('/empleados/{id}', [EmpleadoController::class, 'show'])->name('empleados.detalles'); //listar por id
 
-Route::get('/empleados/crear', function(){
+Route::get('/crear-empleado', function(){
     return view("empleados.crear");
 });
 
