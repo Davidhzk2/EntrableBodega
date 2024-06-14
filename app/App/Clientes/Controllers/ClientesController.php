@@ -43,12 +43,12 @@ class ClientesController extends Controller
      */
     public function show(string $id)
     {
-        // try {
-        //     $clientes = $this->clienteRepository.getById($id);
-        //     return view("clientes.index", compact('clientes'));
-        // }catch(Exception $e){
-        //     die($e->getMessage());
-        // }
+        try {
+            $cliente = $this->clienteRepository->getById($id);
+            return view("clientes.detalles", compact('cliente'));
+        }catch(Exception $e){
+            die($e->getMessage());
+        }
     }
 
     /**

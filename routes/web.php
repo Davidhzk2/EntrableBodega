@@ -18,14 +18,17 @@ Route::get('/empleados/{id}', [EmpleadoController::class, 'show'])->name('emplea
 
 Route::get('/crear-empleado', function(){
     return view("empleados.crear");
-});
-
-
+    });
+    
+    
 Route::resource('/clientes', ClientesController::class); //
+Route::get('/clientes/{id}', [ClientesController::class, 'show'])->name('clientes.detalles'); //listar por id
 Route::get('/crear-cliente', function(){
     return view("clientes.crear");
 });
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+
+
+Route::get('/', function () {
+    return view('home');
+});
 

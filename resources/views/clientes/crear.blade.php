@@ -75,7 +75,20 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-body">
-                    <h1 class="mb-5">Registrar Cliente</h1>
+                    <div class="row">
+            <div class="col-md-8">
+                <h1>Registrar Cliente</h1>
+
+            </div>
+            <div class="col-md-4">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ route('clientes.index') }}">Clientes</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Registrar Cliente</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
                     <form class="form" action="{{ route('clientes.store')}}" method="post">
                         @csrf
                         <div class="row">

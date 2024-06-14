@@ -76,7 +76,7 @@
                                     <td>{{$cliente->telefono}}</td>
                                     <td>{{$cliente->direccion}}</td>
                                     <td>
-                                        <a href="#" class="view" title="View" data-toggle="tooltip"><i class="bi bi-eye-fill"></i></a>
+                                        <a href="{{route('clientes.detalles', $cliente->id)}}" class="view" title="View" data-toggle="tooltip"><i class="bi bi-eye-fill"></i></a>
                                         <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="bi bi-pencil-fill ms-2 me-2"></i></a>
                                         <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="bi bi-trash3-fill"></i></a>
                                     </td>
