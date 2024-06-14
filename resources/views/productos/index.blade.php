@@ -44,7 +44,7 @@
                                     <td>{{$producto->precio_venta}}</td>
                                     <td>{{$producto->cantidad}}</td>
                                     <td>{{$producto->estado}}</td>
-                                    <td><a href="{{route('productos.show'))}}" class="btn btn-sm btn-warning">Detalles</a>
+                                    <td><a href="" class="btn btn-sm btn-warning">Detalles</a>
                                     <a class="btn btn-sm btn-primary">Actualizar</a><a class="btn btn-sm btn-danger">Eliminar</a></td>
 
                                 </tr>

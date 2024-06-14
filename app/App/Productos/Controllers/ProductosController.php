@@ -5,7 +5,6 @@ namespace App\App\Productos\Controllers;
 use App\App\Productos\Repositories\ProductosRepository;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
 use PHPUnit\Exception;
 
 class ProductosController extends Controller
@@ -60,20 +59,19 @@ class ProductosController extends Controller
         }
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
+
 
     /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, string $id)
     {
-        //
+        try {
+            $user = $this->ProductoRepository->update($id, $request);
+            return response()->json($user, 200);
+        }catch (Exception $e){
+            die($e->getMessage());
+        }
     }
 
     /**
