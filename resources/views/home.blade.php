@@ -35,6 +35,7 @@
                 <a href="{{ route('empleados.index') }}" class="btn btn-primary">Ver Empleados</a>
                 <a href="{{ route('productos.index') }}" class="btn btn-primary">Ver Productos</a>
                 <a href="{{ route('clientes.index') }}" class="btn btn-primary">Ver Clientes</a>
+                <a href="{{ route('inventarios.index') }}" class="btn btn-primary">Ver inventarios</a>
             </div>
         </div>
     </div>
